@@ -2,34 +2,21 @@ class Solution {
 public:
     void sortColors(vector<int>& nums) {
         int n = nums.size();
-        int x=0, y=0, z=0;
-        for (int i=0; i<n; i++){
-            if (nums[i]==0){
-                x++;
+        int low=0, mid=0, high=n-1;
+        while (mid<=high){
+            if (nums[mid]==0){
+                swap(nums[mid], nums[low]);
+                mid++;
+                low++;
                 continue;
             }
-            if (nums[i]==1){
-                y++;
+            if (nums[mid]==1){
+                mid++;
                 continue;
             }
-            if (nums[i]==2){
-                z++;
-                continue;
-            }
-        }
-        cout<<x<<endl<<y<<endl<<z<<endl;
-        for (int j=0; j<n; j++){
-            if (j<x){
-                nums[j]=0;
-                continue;
-            }
-            if (j<x+y){
-                nums[j]=1;
-                continue;
-            }
-            if (j<x+y+z){
-                nums[j]=2;
-                continue;
+            if (nums[mid]==2){
+                swap(nums[mid], nums[high]);
+                high--;
             }
         }
     }
