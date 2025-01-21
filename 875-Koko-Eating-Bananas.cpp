@@ -14,7 +14,6 @@ public:
             long int hours = 0;
             for (int i = 0; i < piles.size(); i++) {
                 hours += ceil(double(piles[i])/ double(mid));
-                // hours += ceil(piles[i]*1.0/ mid);
             }
             if (hours == h) {
                 minSpeed = mid;
