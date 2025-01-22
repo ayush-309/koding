@@ -29,7 +29,6 @@ public:
                     flag=0;
                 }
             }
-            cout<<mid<<", "<<count<<endl;
             if (count>=m){
                 ans = min(ans, mid);
                 high = mid-1;
