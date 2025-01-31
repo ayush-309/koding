@@ -19,9 +19,8 @@ public:
             front = curr->next;
             curr->next = back;
             back = curr;
-            head = curr;
             curr = front;
         }
-        return head;
+        return back;
     }
 };
