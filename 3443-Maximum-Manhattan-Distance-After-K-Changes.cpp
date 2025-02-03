@@ -1,5 +1,7 @@
 class Solution {
 public:
+    
+    // Good intuitive approach
     int maxDistance(string s, int k) {
         int x = 0, y = 0;
         int maxDist = INT_MIN;
